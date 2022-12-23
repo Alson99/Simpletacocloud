@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,7 +18,6 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/design")
 public class DesignTacoController {
-
 
     @GetMapping
     public String showDesignFrom(Model model){
@@ -41,7 +39,6 @@ public class DesignTacoController {
           /* model.addAttribute(type.toString().toLowerCase(),
              //      filterByType(ingredients, type)
            );*/
-
         }
         //model.addSubModel("design", new Taco());
         return "design";
@@ -60,6 +57,7 @@ public class DesignTacoController {
 
         return "redirect:/orders/current";
     }
+
 
 
 }
